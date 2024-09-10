@@ -11,8 +11,8 @@ $DEBUG   = 0;
 
 $osa = new OpnSenseAPI($HOST, $KEY, $SECRET, $DEBUG);
 
-$opnVLANS = $osa->run('interfaces/vlan_settings/searchItem',[])['rows'];
-$IFS = $osa->run('interfaces/overview/interfacesInfo',[])['rows'];
+$opnVLANS = $osa->run('interfaces/vlan_settings/searchItem')['rows'];
+$IFS = $osa->run('interfaces/overview/interfacesInfo')['rows'];
 $res = $osa->run('interfaces/vlan_settings/addItem',[
     "vlan" =>
     [
@@ -24,4 +24,4 @@ $res = $osa->run('interfaces/vlan_settings/addItem',[
         'tag' => 1,
     ]
 ]);
-$res = $osa->run('interfaces/vlan_settings/reconfigure',[]);
+$res = $osa->run('interfaces/vlan_settings/reconfigure');
