@@ -1,14 +1,14 @@
 <?php
 
 class OpnSenseAPI {
-	protected $host;
+    protected $host;
     protected $key;
     protected $secret;
 
     protected $debug        = 0;
 
     protected $def_proto    = 'https://';
-	protected $def_endpoint = '/api';
+    protected $def_endpoint = '/api';
 
     public function OpnSenseAPI($host, $key, $secret, $debug = 0) {
         $this->host   = $host;
