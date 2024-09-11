@@ -1,2 +1,2 @@
 # opnsense-php
-Opnsense API php client
+OPNsense API php client
